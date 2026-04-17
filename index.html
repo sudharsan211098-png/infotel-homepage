@@ -745,10 +745,10 @@
       pointer-events: none;
       z-index: 9999;
       background: radial-gradient(600px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
-          var(--glow-color, rgba(2, 109, 196, 0.03)),
+          rgba(255, 255, 255, 0.05),
           transparent 40%);
       opacity: var(--glow-opacity, 0);
-      transition: opacity 0.5s ease, background-color 0.5s ease;
+      transition: opacity 0.5s ease;
       will-change: background;
     }
 
@@ -2155,7 +2155,7 @@
   </div>
   <div class="global-glow" id="globalGlow"></div>
   <main class="site-main">
-    <section class="section section-hero" id="hero">
+    <section class="section section-hero dark-section" id="hero">
       <div class="hero-parallax-bg" id="parallaxBg"></div>
       <div class="container hero-layout">
         <div class="hero-copy">
@@ -2375,7 +2375,7 @@
       </div>
     </section>
 
-    <section class="section section-why" id="why-choose-us">
+    <section class="section section-why dark-section" id="why-choose-us">
       <div class="container why-layout">
         <div class="why-copy reveal">
           <span class="section-tag why">Why Choose Us</span>
@@ -2769,7 +2769,7 @@
       </div>
     </section>
 
-    <section class="section section-cta" id="cta">
+    <section class="section section-cta dark-section" id="cta">
       <div class="container">
         <div class="cta-box reveal"><span class="section-tag inverse">Let's Build Together</span>
           <h2>Join Us to Build Something Extraordinary</h2>
@@ -2782,7 +2782,7 @@
     </section>
   </main>
 
-  <footer class="footer" id="footer">
+  <footer class="footer dark-section" id="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -2865,7 +2865,7 @@
     const handleHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
     handleHeader();
 
-    // Interaction logic for Global Cursor Glow
+    // Interaction logic for Global Context-Aware Glow
     const globalGlow = document.getElementById('globalGlow');
     const parallaxBg = document.getElementById('parallaxBg');
 
@@ -2881,18 +2881,15 @@
         });
       }, { passive: true });
 
+      // Context-aware fade logic
       document.body.addEventListener('mouseover', (e) => {
-        const section = e.target.closest('.section, .site-header, .footer');
+        const section = e.target.closest('section, footer');
         if (section) {
-          if (section.classList.contains('section-hero') || section.classList.contains('footer') || section.classList.contains('site-header')) {
-            globalGlow.style.setProperty('--glow-color', 'rgba(255, 255, 255, 0.07)');
-            globalGlow.style.setProperty('--glow-opacity', '1');
-          } else if (section.classList.contains('section-contact') || section.classList.contains('section-about') || section.classList.contains('section-why')) {
-            globalGlow.style.setProperty('--glow-color', 'rgba(2, 109, 196, 0.04)');
+          if (section.classList.contains('dark-section')) {
             globalGlow.style.setProperty('--glow-opacity', '1');
           } else {
-            globalGlow.style.setProperty('--glow-color', 'rgba(2, 109, 196, 0.025)');
-            globalGlow.style.setProperty('--glow-opacity', '1');
+            // Disable glow on light/white sections
+            globalGlow.style.setProperty('--glow-opacity', '0');
           }
         }
       }, { passive: true });
