@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development & Maintenance Services | Infotel India</title>
+    <meta name="description"
+        content="Infotel India delivers expert software development and maintenance services — from custom applications to modernisation, API integration, and agile delivery at enterprise scale.">
+    <link rel="canonical" href="/expertise/software-development">
+
+    <!-- Inherited Base Styles -->
+    <style>
+        :root {
+            --color-navy: #005091;
+            --color-royal: #026dc4;
+            --color-steel: #6ea0c3;
+            --color-sky: #a3d8f7;
+            --color-ice: #e8f5fd;
+            --color-ember: #f58740;
+            --color-teal: #00a28b;
+            --color-violet: #8f52c0;
+            --color-ink: #0a1628;
+            --color-dark-navy: #1b2f4a;
+            --color-frost: #f5f7fa;
+            --color-white: #fff;
+            --color-slate: #6b7b8f;
+            --color-mist: #b0bcc8;
+            --font-primary: "Segoe UI", system-ui, -apple-system, sans-serif;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 24px;
+            --radius-full: 9999px;
+            --shadow-soft: 0 8px 32px rgba(0, 80, 145, .1);
+            --shadow-card: 0 20px 60px rgba(10, 22, 40, .08);
+            --shadow-strong: 0 30px 80px rgba(10, 22, 40, .16);
+            --container-max: 1280px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-primary);
+            color: var(--color-slate);
+            background: var(--color-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            margin: 0;
+        }
+
+        .container {
+            width: min(var(--container-max), calc(100% - 160px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 96px 0;
+            position: relative;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            padding: 5px 16px;
+            border-radius: var(--radius-full);
+            background: var(--color-ice);
+            color: var(--color-navy);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        .section-tag.inverse {
+            background: rgba(255, 255, 255, .14);
+            color: var(--color-white);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 600;
+            transition: all .3s ease;
+        }
+
+        .btn-cta {
+            background: var(--color-ember);
+            color: #fff;
+            box-shadow: 0 12px 24px rgba(245, 135, 64, 0.2);
+        }
+
+        .btn-cta:hover {
+            background: #dc7636;
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost-light {
+            background: rgba(255, 255, 255, .06);
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, .4);
+        }
+
+        .btn-ghost-light:hover {
+            background: rgba(255, 255, 255, .12);
+            transform: translateY(-2px);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: all .6s cubic-bezier(.2, .8, .4, 1);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Nav bar & Dropdowns Styles (verbatim from index.html) */
+        .site-header {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 100;
+            background: transparent;
+            padding: 12px 0;
+            transition: all .4s ease;
+        }
+
+        .site-header.scrolled {
+            background: rgba(0, 80, 145, 0.96);
+            backdrop-filter: blur(16px);
+            padding: 8px 0;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-shell {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 64px;
+        }
+
+        .brand-logo {
+            height: 42px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 24px 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-item:hover .nav-link {
+            color: #fff;
+        }
+
+        .icon-chevron {
+            width: 12px;
+            height: 12px;
+            stroke: currentColor;
+            fill: none;
+            transition: transform .3s;
+        }
+
+        .nav-item:hover .icon-chevron {
+            transform: rotate(180deg);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 12px;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .nav-item:hover>.dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            color: var(--color-slate);
+            transition: all .2s;
+        }
+
+        .dropdown-link:hover {
+            background: var(--color-ice);
+            color: var(--color-navy);
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            min-width: 520px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .nav-item:hover>.mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-item {
+            display: flex;
+            gap: 14px;
+            padding: 12px;
+            border-radius: var(--radius-lg);
+            transition: all .2s;
+        }
+
+        .mega-item:hover {
+            background: var(--color-ice);
+        }
+
+        .mega-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-navy);
+            background: #fff;
+            border: 1px solid rgba(2, 109, 196, 0.1);
+            border-radius: 8px;
+        }
+
+        .mega-content h4 {
+            font-size: 14px;
+            color: var(--color-ink);
+        }
+
+        .mega-content p {
+            font-size: 12px;
+            color: var(--color-slate);
+        }
+    </style>
+
+    <style>
+        /* ── PAGE-SPECIFIC STYLES ── */
+        .page-hero {
+            background: var(--color-navy);
+            color: #fff;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, .06) 1px, transparent 1px);
+            background-size: 36px 36px;
+            mask-image: radial-gradient(ellipse 70% 60% at 70% 50%, black 20%, transparent 75%);
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 700;
+            letter-spacing: -.04em;
+            max-width: 720px;
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .page-hero .lead {
+            color: rgba(255, 255, 255, .76);
+            max-width: 640px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .56);
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .client-strip {
+            margin-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+        }
+
+        .client-strip-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .client-logos {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .client-logo-item img {
+            max-height: 32px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+
+        .client-logo-item img:hover {
+            opacity: 1;
+        }
+
+        .services-tabs {
+            background: var(--color-white);
+            border-bottom: 1px solid rgba(208, 228, 240, .8);
+            position: sticky;
+            top: 72px;
+            z-index: 20;
+        }
+
+        .tabs-inner {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .tab-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 18px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-slate);
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all .2s;
+        }
+
+        .tab-link:hover {
+            color: var(--color-navy);
+        }
+
+        .tab-link.is-active {
+            color: var(--color-navy);
+            border-bottom-color: var(--color-ember);
+        }
+
+        .numbered-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .numbered-card {
+            background: var(--color-white);
+            border: 1px solid #d0e4f0;
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            transition: all .3s ease;
+        }
+
+        .numbered-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .card-num {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-ember);
+            margin-bottom: 14px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 48px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-ice), var(--color-steel), var(--color-ice));
+            z-index: 0;
+        }
+
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--color-ice);
+            border: 2px solid rgba(2, 109, 196, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+            transition: all .3s;
+        }
+
+        .process-step:hover .step-circle {
+            background: var(--color-navy);
+            border-color: var(--color-navy);
+            transform: scale(1.08);
+        }
+
+        .process-step:hover .step-circle svg {
+            stroke: #fff;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 32px;
+            border-radius: var(--radius-xl);
+            background: #fff;
+            border: 1px solid #d0e4f0;
+        }
+
+        .stat-num {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1;
+        }
+
+        .expertise-accordion {
+            display: grid;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .acc-item {
+            border: 1px solid #d0e4f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .acc-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            background: #fff;
+            width: 100%;
+            font-weight: 600;
+            text-align: left;
+            color: var(--color-ink);
+        }
+
+        .acc-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform .3s;
+        }
+
+        .acc-item.is-open .acc-icon {
+            transform: rotate(45deg);
+        }
+
+        .acc-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease-out;
+        }
+
+        .acc-item.is-open .acc-body {
+            max-height: 800px;
+        }
+
+        .acc-content {
+            padding: 0 24px 24px;
+            border-top: 1px solid var(--color-ice);
+            padding-top: 20px;
+        }
+
+        .tech-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 32px 0;
+        }
+
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 99px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1.5px solid #d0e4f0;
+            background: #fff;
+            transition: all .2s;
+        }
+
+        .filter-btn.is-active {
+            background: var(--color-navy);
+            border-color: var(--color-navy);
+            color: #fff;
+        }
+
+        .tech-domain {
+            display: none;
+            margin-bottom: 24px;
+        }
+
+        .tech-domain.is-visible {
+            display: block;
+            animation: fadeIn .4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .tech-tag {
+            padding: 6px 12px;
+            background: var(--color-ice);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-navy);
+            border: 1px solid rgba(2, 109, 196, 0.1);
+        }
+
+        .maintenance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .maint-card {
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #d0e4f0;
+            background: #fff;
+        }
+
+        .maint-type {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .maint-type-corrective {
+            background: #fef0e6;
+            color: #c05e1a;
+        }
+
+        .maint-type-adaptive {
+            background: #e0f4f1;
+            color: #007a68;
+        }
+
+        .maint-type-perfective {
+            background: #e8f5fd;
+            color: #026dc4;
+        }
+
+        .maint-type-preventive {
+            background: #f0ebf8;
+            color: #6a3a99;
+        }
+
+        .cta-strip {
+            background: var(--color-navy);
+            border-radius: 24px;
+            padding: 56px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: center;
+            margin-top: 64px;
+        }
+
+        .cta-strip h2 {
+            color: #fff;
+            font-size: 32px;
+        }
+
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr 240px;
+            gap: 48px;
+        }
+
+        .side-nav {
+            position: sticky;
+            top: 140px;
+        }
+
+        .side-nav a {
+            display: block;
+            padding: 8px 0;
+            color: var(--color-slate);
+            font-size: 14px;
+            transition: color .2s;
+        }
+
+        .side-nav a:hover,
+        .side-nav a.is-active {
+            color: var(--color-navy);
+            font-weight: 600;
+        }
+
+        @media(max-width:1024px) {
+            .page-layout {
+                grid-template-columns: 1fr
+            }
+
+            .side-nav {
+                display: none
+            }
+
+            .numbered-grid,
+            .maintenance-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cta-strip {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (Inherited) -->
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html">
+                <img src="logo.png" alt="Infotel India" class="brand-logo">
+            </a>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a class="nav-link" href="#">About us <svg class="icon-chevron">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"></path>
+                        </svg></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-link">About Infotel Group</a>
+                        <a href="#" class="dropdown-link">Leadership Team</a>
+                        <a href="#" class="dropdown-link">Our Values</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Our Expertise <svg class="icon-chevron">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"></path>
+                        </svg></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-header">Our Expertise</div>
+                        <a href="expertise-software-development.html" class="mega-item">
+                            <div class="mega-icon"><svg width="20" height="20" fill="none" stroke="currentColor">
+                                    <path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"></path>
+                                </svg></div>
+                            <div class="mega-content">
+                                <h4>Software Development</h4>
+                                <p>Custom solutions & maintenance</p>
+                            </div>
+                        </a>
+                        <a href="#" class="mega-item">
+                            <div class="mega-icon"><svg width="20" height="20" fill="none" stroke="currentColor">
+                                    <path d="M7 18h10a4 4 0 0 0 .2-8A6 6 0 0 0 6 9.2 4.2 4.2 0 0 0 7 18z"></path>
+                                </svg></div>
+                            <div class="mega-content">
+                                <h4>Cloud Migration</h4>
+                                <p>Enterprise cloud transformation</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a class="nav-link" href="#">Case Studies</a>
+                <a class="nav-link" href="/blog">Blog</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-cta" href="/contact">Contact us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
+            <div class="container">
+                <div class="breadcrumb"><a href="index.html">Home</a> <span class="breadcrumb-sep">/</span> <a
+                        href="#">Our Expertise</a> <span class="breadcrumb-sep">/</span> Software Development</div>
+                <span class="section-tag inverse">Our Expertise</span>
+                <h1 class="reveal">Software Development & Maintenance Services</h1>
+                <p class="lead reveal">With our dedicated software development and maintenance services, we accelerate
+                    issue resolution, improve performance, and future-proof your applications through proven agile
+                    delivery and continuous support.</p>
+                <div class="btn-row reveal" style="margin-top: 32px;">
+                    <a class="btn btn-cta" href="#contact">Request a Consultation</a>
+                    <a class="btn btn-ghost-light" href="#overview">View Services</a>
+                </div>
+                <div class="client-strip reveal">
+                    <div class="client-strip-label">Trusted by global enterprises</div>
+                    <div class="client-logos">
+                        <div class="client-logo-item"><img
+                                src="https://infotel-india.in/wp-content/uploads/2025/07/airfrance_logo.png"
+                                alt="Air France"></div>
+                        <div class="client-logo-item"><img
+                                src="https://infotel-india.in/wp-content/uploads/2025/07/airbus_logo.png" alt="Airbus">
+                        </div>
+                        <div class="client-logo-item"><img
+                                src="https://infotel-india.in/wp-content/uploads/2025/07/stell_logo.png"
+                                alt="Stellantis"></div>
+                        <div class="client-logo-item"><img
+                                src="https://infotel-india.in/wp-content/uploads/2025/07/virgin_logo1.png" alt="Virgin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tabs -->
+        <nav class="services-tabs">
+            <div class="tabs-inner">
+                <a href="expertise-software-development.html" class="tab-link is-active">Software Dev & Maintenance</a>
+                <a href="#" class="tab-link">Cloud Migration</a>
+                <a href="#" class="tab-link">IT Support</a>
+                <a href="#" class="tab-link">Product Management</a>
+                <a href="#" class="tab-link">Service Management</a>
+                <a href="#" class="tab-link">Legacy Renovation</a>
+                <a href="#" class="tab-link">Business Analysis</a>
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 64px;">
+            <div class="page-layout">
+                <div class="page-content">
+
+                    <!-- Section 3: Overview -->
+                    <section id="overview" class="reveal" style="padding-bottom: 64px;">
+                        <span class="section-tag">What We Offer</span>
+                        <h2>Software Development & Maintenance Services We Offer</h2>
+                        <div class="numbered-grid">
+                            <div class="numbered-card">
+                                <div class="card-num">01</div>
+                                <h3>Software Development Services</h3>
+                                <p>We utilise our software development expertise to streamline your business operations
+                                    and gain a competitive edge.</p>
+                            </div>
+                            <div class="numbered-card">
+                                <div class="card-num">02</div>
+                                <h3>Custom Application Maintenance</h3>
+                                <p>Security audits, server management, and performance optimisation to ensure
+                                    uninterrupted operation.</p>
+                            </div>
+                            <div class="numbered-card">
+                                <div class="card-num">03</div>
+                                <h3>Application Monitoring</h3>
+                                <p>Health monitoring, dependency management, and security gap identification for your
+                                    tech stack.</p>
+                            </div>
+                            <div class="numbered-card">
+                                <div class="card-num">04</div>
+                                <h3>Application Modernisation</h3>
+                                <p>Transformation of legacy applications to improve agility, scalability, and
+                                    performance.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 4: Process -->
+                    <section id="process" class="reveal"
+                        style="background: var(--color-frost); padding: 80px 48px; border-radius: 20px; margin-bottom: 64px;">
+                        <span class="section-tag">Our Process</span>
+                        <h2>How Do We Do It?</h2>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-circle"><svg width="24" height="24" stroke="currentColor" fill="none">
+                                        <path
+                                            d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z">
+                                        </path>
+                                    </svg></div>
+                                <h4>Agile Team</h4>
+                                <p>Cross-functional teams delivering within iterations.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-circle"><svg width="24" height="24" stroke="currentColor" fill="none">
+                                        <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path>
+                                    </svg></div>
+                                <h4>Backlog</h4>
+                                <p>Prioritised valuable tasks for execution.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-circle"><svg width="24" height="24" stroke="currentColor" fill="none">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg></div>
+                                <h4>Sprints</h4>
+                                <p>1-4 week cycles of focused development.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-circle"><svg width="24" height="24" stroke="currentColor" fill="none">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <path d="M16 2v4M8 2v4M3 10h18"></path>
+                                    </svg></div>
+                                <h4>Stand-ups</h4>
+                                <p>Daily alignment and blocker resolution.</p>
+                            </div>
+                        </div>
+                        <!-- Section 5: Stats -->
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <div class="stat-num counter" data-count="40" data-suffix="+">40+</div>
+                                <div class="stat-label">Years of Experience</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num counter" data-count="98" data-suffix="%">98%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num counter" data-count="200" data-suffix="+">200+</div>
+                                <div class="stat-label">Expert Professionals</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 6: Expertise Accordion -->
+                    <section id="expertise" class="reveal" style="margin-bottom: 64px;">
+                        <span class="section-tag">Our Expertise</span>
+                        <h2>Deep Expertise in Software Development</h2>
+                        <div class="expertise-accordion">
+                            <div class="acc-item is-open">
+                                <button class="acc-trigger">Requirement Analysis <svg class="acc-icon"
+                                        stroke="currentColor" fill="none">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg></button>
+                                <div class="acc-body">
+                                    <div class="acc-content">
+                                        <p>Gathering precise requirements before writing code is core to our process.
+                                        </p>
+                                        <ul>
+                                            <li>Stakeholder Workshops & Use Case Mapping</li>
+                                            <li>Feasibility Studies & Risk Assessments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-item">
+                                <button class="acc-trigger">UI/UX Design <svg class="acc-icon" stroke="currentColor"
+                                        fill="none">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg></button>
+                                <div class="acc-body">
+                                    <div class="acc-content">
+                                        <p>User experience dictates adoption. We focus on wireframing, mapping, and
+                                            testing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-item">
+                                <button class="acc-trigger">Architecture & Tech Selection <svg class="acc-icon"
+                                        stroke="currentColor" fill="none">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg></button>
+                                <div class="acc-body">
+                                    <div class="acc-content">
+                                        <p>Future-proofing with microservices, cloud-native, and robust infrastructure.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 7: Tech Filter -->
+                    <section id="tech" class="reveal"
+                        style="background: var(--color-ice); padding: 64px; border-radius: 20px; margin-bottom: 64px;">
+                        <span class="section-tag">Technology</span>
+                        <h2>Our Tech Powerhouse</h2>
+                        <div class="tech-filter">
+                            <button class="filter-btn is-active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="web">Web</button>
+                            <button class="filter-btn" data-filter="cloud">Cloud</button>
+                            <button class="filter-btn" data-filter="data">Data</button>
+                        </div>
+                        <div class="tech-domain is-visible" data-domain="web">
+                            <h4>Web & Development</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Angular</span><span class="tech-tag">React JS</span><span
+                                    class="tech-tag">Java</span><span class="tech-tag">Python</span><span
+                                    class="tech-tag">Node JS</span>
+                            </div>
+                        </div>
+                        <div class="tech-domain is-visible" data-domain="cloud">
+                            <h4>Cloud Platforms</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">AWS</span><span class="tech-tag">Azure</span><span
+                                    class="tech-tag">GCP</span><span class="tech-tag">DevOps</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 8: Maintenance -->
+                    <section id="maintenance" class="reveal" style="margin-bottom: 64px;">
+                        <span class="section-tag">Maintenance</span>
+                        <h2>Software Maintenance Services</h2>
+                        <div class="maintenance-grid">
+                            <div class="maint-card">
+                                <span class="maint-type maint-type-corrective">Corrective</span>
+                                <h3>Corrective Maintenance</h3>
+                                <p>Reactive approach to resolve code or design errors affecting performance.</p>
+                            </div>
+                            <div class="maint-card">
+                                <span class="maint-type maint-type-adaptive">Adaptive</span>
+                                <h3>Adaptive Maintenance</h3>
+                                <p>Adapting software to new conditions, OS updates, or compliance needs.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 11: Final CTA -->
+                    <div class="cta-strip reveal">
+                        <div>
+                            <h2>Turn ideas into impact with expert software development.</h2>
+                            <p>Discuss your roadmap with our team today.</p>
+                        </div>
+                        <a href="#" class="btn btn-cta">Schedule Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Side Navigation -->
+                <aside class="side-nav">
+                    <div
+                        style="font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; color: var(--color-mist);">
+                        On This Page</div>
+                    <a href="#overview" class="is-active">What We Offer</a>
+                    <a href="#process">Our Process</a>
+                    <a href="#expertise">Our Expertise</a>
+                    <a href="#tech">Tech Powerhouse</a>
+                    <a href="#maintenance">Maintenance</a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="section" style="background: var(--color-ink); color: #fff; padding-top: 64px; margin-top: 96px;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 48px;">
+                <div>
+                    <img src="logo.png" alt="Infotel" style="height: 32px; filter: brightness(0) invert(1);">
+                    <p style="margin-top: 24px; font-size: 14px; opacity: 0.6;">Delivering digital transformation for
+                        over four decades.</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 24px;">Services</h4>
+                    <a href="#" style="display: block; font-size: 13px; margin-bottom: 12px; opacity: 0.7;">Cloud
+                        Migration</a>
+                    <a href="#" style="display: block; font-size: 13px; margin-bottom: 12px; opacity: 0.7;">Legacy
+                        Transformation</a>
+                </div>
+            </div>
+            <div style="padding: 24px 0; font-size: 12px; opacity: 0.5;">Copyright 2025 Infotel India. All rights
+                reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Scrolled header
+        window.addEventListener('scroll', () => {
+            document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Accordion logic
+        document.querySelectorAll('.acc-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const wasOpen = item.classList.contains('is-open');
+                document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('is-open'));
+                if (!wasOpen) item.classList.add('is-open');
+            });
+        });
+
+        // Tech filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+                btn.classList.add('is-active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.tech-domain').forEach(domain => {
+                    domain.classList.toggle('is-visible', filter === 'all' || domain.dataset.domain === filter);
+                });
+            });
+        });
+
+        // Side nav active state
+        const sideNavLinks = document.querySelectorAll('.side-nav a');
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                const top = s.offsetTop - 150;
+                if (window.scrollY >= top) current = s.getAttribute('id');
+            });
+            sideNavLinks.forEach(link => {
+                link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
+</body>
+
+</html>
