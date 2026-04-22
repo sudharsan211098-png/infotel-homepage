@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Migration Services | Cloud Application Migration | Infotel India</title>
+    <meta name="description" content="Infotel India delivers expert cloud migration services — from strategy and assessment to implementation and security. Migrate to AWS, Azure, or Google Cloud with minimal disruption and maximum performance.">
+    <link rel="canonical" href="/expertise/cloud-migration">
+
+    <style>
+        :root {
+            --color-navy: #005091;
+            --color-royal: #026dc4;
+            --color-steel: #6ea0c3;
+            --color-sky: #a3d8f7;
+            --color-ice: #e8f5fd;
+            --color-ember: #f58740;
+            --color-teal: #00a28b;
+            --color-violet: #8f52c0;
+            --color-ink: #0a1628;
+            --color-dark-navy: #1b2f4a;
+            --color-frost: #f5f7fa;
+            --color-white: #fff;
+            --color-slate: #6b7b8f;
+            --color-mist: #b0bcc8;
+            --font-primary: "Segoe UI", system-ui, -apple-system, sans-serif;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 24px;
+            --radius-full: 9999px;
+            --shadow-soft: 0 8px 32px rgba(0, 80, 145, .1);
+            --shadow-card: 0 20px 60px rgba(10, 22, 40, .08);
+            --shadow-strong: 0 30px 80px rgba(10, 22, 40, .16);
+            --container-max: 1280px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-primary);
+            color: var(--color-slate);
+            background: var(--color-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+        }
+
+        .container {
+            width: min(var(--container-max), calc(100% - 160px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 96px 0;
+            position: relative;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            background: var(--color-ice);
+            color: var(--color-navy);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        .section-tag.inverse {
+            background: rgba(255, 255, 255, .14);
+            color: var(--color-white);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 600;
+            transition: all .3s ease;
+        }
+
+        .btn-cta {
+            background: var(--color-ember);
+            color: #fff;
+            box-shadow: 0 12px 24px rgba(245, 135, 64, 0.2);
+        }
+
+        .btn-cta:hover {
+            background: #dc7636;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(245, 135, 64, 0.3);
+        }
+
+        .btn-ghost-light {
+            background: rgba(255, 255, 255, .06);
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, .4);
+        }
+
+        .btn-ghost-light:hover {
+            background: rgba(255, 255, 255, .12);
+            transform: translateY(-2px);
+            border-color: #fff;
+        }
+
+        /* ── HEADER & NAV ── */
+        .site-header {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 100;
+            background: transparent;
+            padding: 16px 0;
+            transition: all .4s ease;
+        }
+
+        .site-header.scrolled {
+            background: rgba(0, 80, 145, 0.96);
+            backdrop-filter: blur(16px);
+            padding: 12px 0;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-shell {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            height: 42px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-item { position: relative; }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-item:hover .nav-link { color: #fff; }
+
+        .icon-chevron {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            transition: transform .3s;
+        }
+
+        .nav-item:hover .icon-chevron { transform: rotate(180deg); }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 12px;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .nav-item:hover>.dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            color: var(--color-slate);
+            transition: all .2s;
+        }
+
+        .dropdown-link:hover {
+            background: var(--color-ice);
+            color: var(--color-navy);
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #fff;
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            min-width: 560px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .mega-menu-header {
+            grid-column: 1 / -1;
+            padding: 0 12px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--color-mist);
+            letter-spacing: .05em;
+        }
+
+        .nav-item:hover>.mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-item {
+            display: flex;
+            gap: 14px;
+            padding: 12px;
+            border-radius: var(--radius-lg);
+            transition: all .2s;
+        }
+
+        .mega-item:hover { background: var(--color-ice); }
+
+        .mega-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-navy);
+            background: #fff;
+            border: 1px solid rgba(2, 109, 196, 0.1);
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .mega-content h4 {
+            font-size: 14px;
+            color: var(--color-ink);
+            margin-bottom: 2px;
+        }
+
+        .mega-content p {
+            font-size: 12px;
+            color: var(--color-slate);
+        }
+
+        /* ── HERO ── */
+        .page-hero {
+            background: var(--color-navy);
+            color: #fff;
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, .06) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse 60% 60% at 75% 50%, black 10%, transparent 80%);
+        }
+
+        .page-hero-inner {
+            display: grid;
+            grid-template-columns: 52% 48%;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 700;
+            letter-spacing: -.05em;
+            line-height: .98;
+            margin-bottom: 24px;
+        }
+
+        .page-hero .lead {
+            color: rgba(255, 255, 255, .78);
+            font-size: clamp(16px, 1.6vw, 19px);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 28px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        .breadcrumb a { color: rgba(255, 255, 255, .7); }
+        .breadcrumb-sep { opacity: .4; }
+
+        .page-hero-visual {
+            position: relative;
+        }
+
+        .hero-main-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-2xl);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, .4);
+            border: 1px solid rgba(255, 255, 255, .1);
+            transition: transform .6s ease;
+        }
+
+        .hero-badge-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(8px);
+            padding: 16px 20px;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+        }
+
+        .hero-badge-card.top-left { top: -20px; left: -20px; }
+        .hero-badge-card.bottom-right { bottom: -20px; right: -20px; }
+
+        .hero-badge-icon {
+            width: 44px; height: 44px;
+            border-radius: var(--radius-lg);
+            background: rgba(0, 80, 145, 0.08);
+            color: var(--color-navy);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .hero-badge-content span {
+            display: block;
+            font-size: 24px; font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1; margin-bottom: 2px;
+        }
+
+        .hero-badge-content label {
+            font-size: 12px; font-weight: 600;
+            color: var(--color-slate);
+            white-space: nowrap;
+        }
+
+        /* ── CLIENT STRIP ── */
+        .client-strip {
+            background: var(--color-white);
+            border-bottom: 1px solid #d0e4f0;
+            padding: 40px 0;
+        }
+
+        .client-strip-inner {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .client-strip-label {
+            font-size: 11px; text-transform: uppercase;
+            font-weight: 700; color: var(--color-mist);
+            letter-spacing: .1em; width: 140px;
+        }
+
+        .client-logos {
+            display: flex; align-items: center; gap: 64px; flex: 1; justify-content: space-around;
+        }
+
+        .client-logo-item img {
+            max-height: 28px; width: auto;
+            filter: grayscale(1); opacity: 0.5;
+            transition: all .3s ease;
+        }
+
+        .client-logo-item:hover img {
+            filter: grayscale(0); opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* ── SERVICES TABS ── */
+        .services-tabs {
+            background: var(--color-white);
+            border-bottom: 1px solid rgba(208, 228, 240, .8);
+            position: sticky; top: 72px; z-index: 20;
+        }
+
+        .tabs-inner {
+            display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+            max-width: var(--container-max); margin: 0 auto; padding: 0 80px;
+        }
+
+        .tab-link {
+            display: inline-flex; align-items: center;
+            padding: 18px 24px; font-size: 14px; font-weight: 600;
+            color: var(--color-slate); white-space: nowrap;
+            border-bottom: 3px solid transparent; transition: all .2s;
+        }
+
+        .tab-link:hover { color: var(--color-navy); }
+        .tab-link.is-active { color: var(--color-navy); border-bottom-color: var(--color-ember); }
+
+        /* ── OVERVIEW / GRID ── */
+        .cloud-five-grid {
+            display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 20px; margin-top: 32px;
+        }
+
+        .numbered-card {
+            background: var(--color-white); border: 1px solid #d0e4f0;
+            border-radius: var(--radius-lg); padding: 28px 24px;
+            transition: transform .26s cubic-bezier(.34,1.56,.64,1), box-shadow .26s ease, border-color .26s;
+        }
+
+        .numbered-card:hover {
+            transform: translateY(-5px); box-shadow: var(--shadow-strong);
+            border-color: rgba(2, 109, 196, .18);
+        }
+
+        .card-num {
+            font-size: 13px; font-weight: 700; color: var(--color-ember); margin-bottom: 14px;
+        }
+
+        .card-icon {
+            margin-bottom: 16px; color: var(--color-navy);
+        }
+
+        .numbered-card h3 {
+            font-size: 18px; font-weight: 600; color: var(--color-ink); margin-bottom: 12px;
+        }
+
+        .numbered-card p {
+            font-size: 14px; line-height: 1.6;
+        }
+
+        /* ── STAT ROW ── */
+        .stat-row {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;
+        }
+
+        .stat-box {
+            text-align: center; padding: 40px; border-radius: var(--radius-xl);
+            background: #fff; border: 1px solid #d0e4f0;
+            transition: all .3s ease;
+        }
+
+        .stat-box:hover { border-color: var(--color-sky); box-shadow: var(--shadow-soft); }
+
+        .stat-num {
+            font-size: 48px; font-weight: 700; color: var(--color-navy); line-height: 1; margin-bottom: 8px;
+        }
+
+        .stat-label { font-size: 14px; font-weight: 600; color: var(--color-slate); }
+
+        /* ── PROCESS ── */
+        .cloud-process-grid {
+            display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px 32px; margin-top: 40px; position: relative;
+        }
+
+        .cloud-process-step {
+            background: var(--color-white); border: 1px solid #d0e4f0;
+            border-radius: var(--radius-lg); padding: 28px 24px; position: relative;
+            transition: transform .26s cubic-bezier(.34, 1.56, .64, 1), box-shadow .26s ease, border-color .26s;
+        }
+
+        .cloud-process-step:hover {
+            transform: translateY(-5px); box-shadow: var(--shadow-strong);
+            border-color: rgba(2, 109, 196, .22);
+        }
+
+        .step-number {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px; border-radius: 50%;
+            background: var(--color-navy); color: #fff;
+            font-size: 14px; font-weight: 700; margin-bottom: 16px; flex-shrink: 0;
+        }
+
+        .cloud-process-step h4 { font-size: 17px; font-weight: 600; color: var(--color-ink); margin-bottom: 10px; }
+        .cloud-process-step p { font-size: 14px; color: var(--color-slate); line-height: 1.65; }
+
+        /* ── STRATEGIES ── */
+        .strategy-card {
+            background: var(--color-white); border: 1px solid #d0e4f0;
+            border-radius: var(--radius-lg); padding: 28px 24px;
+            border-top: 3px solid var(--color-navy);
+            transition: transform .26s cubic-bezier(.34, 1.56, .64, 1), box-shadow .26s ease, border-top-color .26s;
+        }
+
+        .strategy-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-strong); border-top-color: var(--color-ember); }
+
+        .strategy-num { font-size: 36px; font-weight: 700; color: var(--color-ember); line-height: 1; letter-spacing: -.04em; margin-bottom: 14px; }
+        .strategy-card h3 { font-size: 17px; font-weight: 600; color: var(--color-ink); margin-bottom: 10px; }
+        .strategy-card p { font-size: 14px; color: var(--color-slate); line-height: 1.65; }
+
+        /* ── PLATFORMS ── */
+        .platform-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 36px; }
+
+        .platform-card {
+            background: var(--color-white); border: 1px solid #d0e4f0; border-radius: var(--radius-xl);
+            padding: 36px 32px; text-align: center;
+            transition: transform .28s cubic-bezier(.34, 1.56, .64, 1), box-shadow .28s ease, border-color .28s;
+        }
+
+        .platform-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-strong); border-color: rgba(2, 109, 196, .22); }
+
+        .platform-logo { height: 56px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .platform-logo img { max-height: 52px; width: auto; object-fit: contain; }
+        .platform-card h3 { font-size: 20px; font-weight: 600; color: var(--color-ink); margin-bottom: 12px; }
+        .platform-card p { font-size: 14px; color: var(--color-slate); line-height: 1.7; }
+
+        /* ── BENEFITS ── */
+        .benefits-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 48px; align-items: start; margin-top: 36px; }
+
+        .benefit-list { display: grid; gap: 16px; margin-top: 0; }
+
+        .benefit-item {
+            display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: var(--radius-md);
+            background: var(--color-white); border: 1px solid #d0e4f0;
+            transition: transform .22s cubic-bezier(.34, 1.56, .64, 1), border-color .22s, box-shadow .22s;
+        }
+
+        .benefit-item:hover { transform: translateX(5px); border-color: rgba(2, 109, 196, .24); box-shadow: var(--shadow-soft); }
+
+        .benefit-icon {
+            width: 36px; height: 36px; border-radius: var(--radius-md);
+            background: var(--color-ice); color: var(--color-navy);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+
+        .benefit-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .benefit-title { font-size: 14px; font-weight: 600; color: var(--color-ink); margin-bottom: 4px; }
+        .benefit-body { font-size: 13px; color: var(--color-slate); line-height: 1.6; }
+
+        /* ── FAQ ── */
+        .faq-list { display: grid; gap: 12px; margin-top: 32px; }
+        .faq-item { border: 1px solid #d0e4f0; border-radius: 12px; overflow: hidden; background: #fff; }
+        .faq-q {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 24px; width: 100%; font-weight: 600; text-align: left; color: var(--color-ink);
+        }
+        .faq-icon { width: 18px; height: 18px; transition: transform .3s ease; }
+        .faq-item.is-open .faq-icon { transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: all .4s cubic-bezier(.4, 0, .2, 1); }
+        .faq-item.is-open .faq-a { max-height: 500px; padding: 0 24px 24px; border-top: 1px solid var(--color-frost); padding-top: 20px; }
+
+        /* ── CTA STRIP ── */
+        .cta-strip-container { margin-top: 96px; padding-bottom: 96px; }
+        .cta-strip {
+            background: var(--color-navy); border-radius: var(--radius-2xl); padding: 72px;
+            position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;
+        }
+        .cta-orb {
+            position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.2; pointer-events: none;
+        }
+        .cta-orb-1 { width: 400px; height: 400px; background: var(--color-sky); top: -100px; left: -100px; }
+        .cta-orb-2 { width: 300px; height: 300px; background: var(--color-ember); bottom: -60px; right: -60px; }
+        .cta-strip h2 { font-size: clamp(28px, 4vw, 42px); color: #fff; margin-bottom: 24px; max-width: 840px; position: relative; z-index: 2; line-height: 1.1; font-weight: 700; letter-spacing: -.04em; }
+        .cta-strip p { font-size: 18px; color: rgba(255, 255, 255, .7); margin-bottom: 40px; max-width: 680px; position: relative; z-index: 2; }
+        .cta-actions { position: relative; z-index: 2; display: flex; gap: 16px; justify-content: center; }
+
+        /* ── FOOTER ── */
+        .site-footer { background: var(--color-ink); color: rgba(255, 255, 255, .6); padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 60px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .footer-brand p { margin-top: 24px; font-size: 14px; max-width: 240px; line-height: 1.6; }
+        .footer-head { font-size: 14px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 24px; }
+        .footer-link { display: block; font-size: 14px; color: rgba(255, 255, 255, .6); margin-bottom: 12px; transition: color .2s; }
+        .footer-link:hover { color: #fff; }
+        .footer-bottom { padding-top: 40px; display: flex; justify-content: space-between; font-size: 13px; }
+
+        /* ── ANIMATIONS ── */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all .7s cubic-bezier(.2, .8, .4, 1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-40px); transition: all .8s cubic-bezier(.2, .8, .4, 1); }
+        .reveal-left.is-visible { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(40px); transition: all .8s cubic-bezier(.2, .8, .4, 1); }
+        .reveal-right.is-visible { opacity: 1; transform: translateX(0); }
+
+        .cloud-process-step { opacity: 0; transform: translateY(28px); transition: opacity .55s cubic-bezier(.2,.8,.4,1), transform .55s cubic-bezier(.2,.8,.4,1); }
+        .cloud-process-step.is-visible { opacity: 1; transform: translateY(0); }
+        .cloud-process-step.is-hidden { opacity: 0; transform: translateY(14px); transition: opacity .35s ease, transform .35s ease; }
+        .cloud-process-step:nth-child(1) { transition-delay: .00s; }
+        .cloud-process-step:nth-child(2) { transition-delay: .08s; }
+        .cloud-process-step:nth-child(3) { transition-delay: .16s; }
+        .cloud-process-step:nth-child(4) { transition-delay: .24s; }
+        .cloud-process-step:nth-child(5) { transition-delay: .32s; }
+        .cloud-process-step:nth-child(6) { transition-delay: .40s; }
+
+        .strategy-card { opacity: 0; transform: translateY(28px); transition: opacity .5s cubic-bezier(.2,.8,.4,1), transform .5s cubic-bezier(.2,.8,.4,1); }
+        .strategy-card.is-visible { opacity: 1; transform: translateY(0); }
+        .strategy-card.is-hidden { opacity: 0; transform: translateY(14px); transition: opacity .32s ease, transform .32s ease; }
+        .strategy-card:nth-child(1) { transition-delay: .00s; }
+        .strategy-card:nth-child(2) { transition-delay: .08s; }
+        .strategy-card:nth-child(3) { transition-delay: .16s; }
+        .strategy-card:nth-child(4) { transition-delay: .24s; }
+        .strategy-card:nth-child(5) { transition-delay: .32s; }
+
+        .platform-card { opacity: 0; transform: translateY(28px) scale(.97); transition: opacity .55s ease, transform .55s cubic-bezier(.34,1.4,.64,1); }
+        .platform-card.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+        .platform-card.is-hidden { opacity: 0; transform: translateY(12px) scale(.98); transition: opacity .35s ease, transform .35s ease; }
+        .platform-card:nth-child(1) { transition-delay: .00s; }
+        .platform-card:nth-child(2) { transition-delay: .12s; }
+        .platform-card:nth-child(3) { transition-delay: .24s; }
+
+        .benefit-item { opacity: 0; transform: translateX(20px); transition: opacity .48s ease, transform .48s ease; }
+        .benefit-item.is-visible { opacity: 1; transform: translateX(0); }
+        .benefit-item.is-hidden { opacity: 0; transform: translateX(10px); transition: opacity .3s ease, transform .3s ease; }
+        .benefit-item:nth-child(1) { transition-delay: .00s; }
+        .benefit-item:nth-child(2) { transition-delay: .06s; }
+        .benefit-item:nth-child(3) { transition-delay: .12s; }
+        .benefit-item:nth-child(4) { transition-delay: .18s; }
+        .benefit-item:nth-child(5) { transition-delay: .24s; }
+        .benefit-item:nth-child(6) { transition-delay: .30s; }
+        .benefit-item:nth-child(7) { transition-delay: .36s; }
+
+        /* Responsive */
+        @media(max-width: 1180px) {
+            .cloud-five-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+            .container { width: min(var(--container-max), calc(100% - 80px)); }
+        }
+        @media(max-width: 1024px) {
+            .page-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .page-hero .lead { margin-inline: auto; }
+            .breadcrumb { justify-content: center; }
+            .btn-row { justify-content: center; }
+            .hero-badge-card { display: none; }
+            .benefits-layout { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media(max-width: 767px) {
+            .cloud-five-grid { grid-template-columns: 1fr; }
+            .cloud-process-grid { grid-template-columns: 1fr; }
+            .platform-grid { grid-template-columns: 1fr; }
+            .stat-row { grid-template-columns: 1fr; }
+            .cta-strip { padding: 48px 24px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .tabs-inner { padding: 0 20px; }
+            .container { width: min(var(--container-max), calc(100% - 40px)); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SVG Library -->
+    <svg width="0" height="0" style="position:absolute;visibility:hidden" aria-hidden="true">
+        <symbol id="icon-chevron" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"></path>
+        </symbol>
+        <symbol id="icon-cloud" viewBox="0 0 24 24">
+            <path d="M7 18h10a4 4 0 0 0 .2-8A6 6 0 0 0 6 9.2 4.2 4.2 0 0 0 7 18z" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3zM9.5 12.5l1.8 1.8 3.7-4.1" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-chart" viewBox="0 0 24 24">
+            <path d="M4 20V10M10 20V4M16 20v-7M22 20V8" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-settings" viewBox="0 0 24 24">
+            <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+            <path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a2 2 0 0 1-2.8 2.8l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9V20a2 2 0 0 1-4 0v-.2a1 1 0 0 0-.6-.9 1 1 0 0 0-1.1.2l-.1.1a2 2 0 0 1-2.8-2.8l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H4a2 2 0 0 1 0-4h.2a1 1 0 0 0 .9-.6 1 1 0 0 0-.2-1.1l-.1-.1a2 2 0 0 1 2.8-2.8l.1.1a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.9V4a2 2 0 0 1 4 0v.2a1 1 0 0 0 .6.9 1 1 0 0 0 1.1-.2l.1-.1a2 2 0 0 1 2.8 2.8l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .9.6H20a2 2 0 0 1 0 4h-.2a1 1 0 0 0-.4 1.9" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-refresh" viewBox="0 0 24 24">
+            <path d="M20 11a8 8 0 1 0 2 5.5M20 4v7h-7" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" fill="none"></path>
+        </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html">
+                <img src="logo.png" alt="Infotel India" class="brand-logo">
+            </a>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a class="nav-link" href="#">About us <svg class="icon-chevron"><use href="#icon-chevron"></use></svg></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-link">About Infotel Group</a>
+                        <a href="#" class="dropdown-link">Leadership Team</a>
+                        <a href="#" class="dropdown-link">Our Values</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Our Expertise <svg class="icon-chevron"><use href="#icon-chevron"></use></svg></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-header">Our Expertise</div>
+                        <a href="expertise-software-development.html" class="mega-item">
+                            <div class="mega-icon"><svg width="20" height="20"><use href="#icon-code"></use></svg></div>
+                            <div class="mega-content">
+                                <h4>Software Development</h4>
+                                <p>Custom solutions & maintenance</p>
+                            </div>
+                        </a>
+                        <a href="expertise-cloud-migration.html" class="mega-item">
+                            <div class="mega-icon"><svg width="20" height="20"><use href="#icon-cloud"></use></svg></div>
+                            <div class="mega-content">
+                                <h4>Cloud Migration</h4>
+                                <p>Enterprise cloud transformation</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a class="nav-link" href="#">Case Studies</a>
+                <a class="nav-link" href="#">Blog</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-cta" href="#">Contact us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
+            <div class="container page-hero-inner">
+                <div class="page-hero-copy">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a> <span class="breadcrumb-sep">/</span> 
+                        <a href="#">Our Expertise</a> <span class="breadcrumb-sep">/</span> Cloud Migration
+                    </div>
+                    <span class="section-tag inverse">Our Expertise</span>
+                    <h1 class="reveal">Cloud Migration Services</h1>
+                    <p class="lead reveal">In the digital transformation era, cloud migration has become indispensable for businesses seeking improved efficiency, flexibility, and scalability. We make your journey to the cloud seamless, secure, and built for long-term performance.</p>
+                    <div class="btn-row reveal">
+                        <a class="btn btn-cta" href="#cta">Request a Consultation</a>
+                        <a class="btn btn-ghost-light" href="#process">View Our Process</a>
+                    </div>
+                </div>
+                <div class="page-hero-visual reveal-right">
+                    <img src="https://infotel-india.in/wp-content/uploads/2025/07/benefits.png" alt="Cloud migration benefits and infrastructure overview — Infotel India" class="hero-main-img" loading="eager" width="1254" height="691">
+                    
+                    <div class="hero-badge-card top-left">
+                        <div class="hero-badge-icon"><svg width="24" height="24"><use href="#icon-cloud"></use></svg></div>
+                        <div class="hero-badge-content">
+                            <span>99.9%</span>
+                            <label>Uptime Guaranteed</label>
+                        </div>
+                    </div>
+
+                    <div class="hero-badge-card bottom-right">
+                        <div class="hero-badge-icon" style="background: rgba(0,162,139,.12); color: var(--color-teal);"><svg width="24" height="24"><use href="#icon-shield"></use></svg></div>
+                        <div class="hero-badge-content">
+                            <span style="color: var(--color-teal);">3</span>
+                            <label>Cloud Platforms</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Client Strip -->
+        <section class="client-strip">
+            <div class="container client-strip-inner">
+                <div class="client-strip-label">Trusted by global enterprises</div>
+                <div class="client-logos">
+                    <div class="client-logo-item"><img src="https://infotel-india.in/wp-content/uploads/2025/07/airfrance_logo.png" alt="Air France"></div>
+                    <div class="client-logo-item"><img src="https://infotel-india.in/wp-content/uploads/2025/07/airbus_logo.png" alt="Airbus"></div>
+                    <div class="client-logo-item"><img src="https://infotel-india.in/wp-content/uploads/2025/07/stell_logo.png" alt="Stellantis"></div>
+                    <div class="client-logo-item"><img src="https://infotel-india.in/wp-content/uploads/2025/07/virgin_logo1.png" alt="Virgin"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tabs -->
+        <nav class="services-tabs">
+            <div class="tabs-inner">
+                <a href="expertise-software-development.html" class="tab-link">Software Dev & Maintenance</a>
+                <a href="expertise-cloud-migration.html" class="tab-link is-active">Cloud Migration</a>
+                <a href="#" class="tab-link">Enhancements & IT Support</a>
+                <a href="#" class="tab-link">Product Management</a>
+                <a href="#" class="tab-link">Service Management</a>
+                <a href="#" class="tab-link">Legacy Renovation</a>
+                <a href="#" class="tab-link">Business & Technical Analysis</a>
+            </div>
+        </nav>
+
+        <!-- Section 4: What We Offer -->
+        <section id="overview" class="section">
+            <div class="container">
+                <div class="reveal center-copy" style="text-align: center; margin-bottom: 48px;">
+                    <span class="section-tag">What We Offer</span>
+                    <h2>Cloud Migration Services We Offer</h2>
+                </div>
+                <div class="cloud-five-grid">
+                    <div class="numbered-card reveal">
+                        <div class="card-num">01</div>
+                        <div class="card-icon"><svg width="28" height="28"><use href="#icon-cloud"></use></svg></div>
+                        <h3>Cloud Architecture Design</h3>
+                        <p>Our cloud architecture design meets your specific requirements — scalability, reliability, security, and high performance — while fully leveraging cloud computing capabilities.</p>
+                    </div>
+                    <div class="numbered-card reveal">
+                        <div class="card-num">02</div>
+                        <div class="card-icon"><svg width="28" height="28"><use href="#icon-chart"></use></svg></div>
+                        <h3>Data Migration</h3>
+                        <p>Cloud data migration involves transferring data, applications, and other business elements from on-premises infrastructure to a cloud computing platform, with zero data loss.</p>
+                    </div>
+                    <div class="numbered-card reveal">
+                        <div class="card-num">03</div>
+                        <div class="card-icon"><svg width="28" height="28"><use href="#icon-code"></use></svg></div>
+                        <h3>Application Migration</h3>
+                        <p>We migrate your existing applications to the cloud with complete safety, handling custom application migration, application upgrades, and full dependency management.</p>
+                    </div>
+                    <div class="numbered-card reveal">
+                        <div class="card-num">04</div>
+                        <div class="card-icon"><svg width="28" height="28"><use href="#icon-shield"></use></svg></div>
+                        <h3>Cloud Security</h3>
+                        <p>Our cloud security services remove risks including data breaches, unauthorised access, and security vulnerabilities, while ensuring full compliance with industry security standards.</p>
+                    </div>
+                    <div class="numbered-card reveal">
+                        <div class="card-num">05</div>
+                        <div class="card-icon"><svg width="28" height="28"><use href="#icon-settings"></use></svg></div>
+                        <h3>Infrastructure Migration</h3>
+                        <p>Our cloud experts analyse your existing IT infrastructure to create a tailor-made strategy that guarantees a seamless, disruption-free migration journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Stats -->
+        <section id="stats" class="section" style="background: var(--color-ice);">
+            <div class="container">
+                <div class="stat-row">
+                    <div class="stat-box reveal">
+                        <div class="stat-num counter" data-count="40" data-suffix="+">0</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat-box reveal">
+                        <div class="stat-num counter" data-count="98" data-suffix="%">0</div>
+                        <div class="stat-label">Client Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-box reveal">
+                        <div class="stat-num counter" data-count="200" data-suffix="+">0</div>
+                        <div class="stat-label">Expert Professionals</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Process -->
+        <section id="process" class="section" style="background: var(--color-frost);">
+            <div class="container">
+                <div class="reveal" style="margin-bottom: 48px;">
+                    <span class="section-tag">Our Process</span>
+                    <h2>Our Streamlined Cloud Migration Process</h2>
+                    <p class="lead" style="margin-top: 16px;">From legacy infrastructure to cloud-native — a structured, phased approach that minimises risk and maximises continuity at every step.</p>
+                </div>
+                <div class="cloud-process-grid">
+                    <div class="cloud-process-step">
+                        <div class="step-number">1</div>
+                        <h4>Strategy Defining</h4>
+                        <p>We assess your business goals, migration triggers, and workload priorities to define and establish a clear cloud strategy aligned to your business objectives.</p>
+                    </div>
+                    <div class="cloud-process-step">
+                        <div class="step-number">2</div>
+                        <h4>Assess Current Infrastructure</h4>
+                        <p>We audit your existing IT estate — applications, data, dependencies, and performance baselines — to build a complete picture of what moves, what transforms, and what stays.</p>
+                    </div>
+                    <div class="cloud-process-step">
+                        <div class="step-number">3</div>
+                        <h4>Plan Migration</h4>
+                        <p>We build a holistic migration plan covering priorities, timelines, milestones, resources, and budget. Careful coordination here ensures minimal downtime and a seamless transition.</p>
+                    </div>
+                    <div class="cloud-process-step">
+                        <div class="step-number">4</div>
+                        <h4>Prepare Your Organisation</h4>
+                        <p>Our cloud experts upskill your development teams on cloud-enabled technologies, migration tooling, and new operational processes to ensure readiness before migration begins.</p>
+                    </div>
+                    <div class="cloud-process-step">
+                        <div class="step-number">5</div>
+                        <h4>Implement Migration</h4>
+                        <p>Migration is executed in three phases: Infrastructure Migration, Application Migration, and Data Migration — each handled in waves using your chosen migration strategy.</p>
+                    </div>
+                    <div class="cloud-process-step">
+                        <div class="step-number">6</div>
+                        <h4>Secure and Manage</h4>
+                        <p>We help safeguard workloads across all cloud environments using your cloud provider's security toolset — firewalls, intrusion detection, monitoring, and ongoing governance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Strategy -->
+        <section id="strategies" class="section">
+            <div class="container">
+                <div class="reveal" style="margin-bottom: 48px;">
+                    <span class="section-tag">Migration Strategy</span>
+                    <h2>Choose the Right Migration Strategy</h2>
+                    <p class="lead" style="margin-top: 16px;">Unlock the full potential of cloud technology with an approach tailored to your application landscape, risk tolerance, and business goals.</p>
+                </div>
+                <div class="cloud-five-grid">
+                    <div class="strategy-card">
+                        <div class="strategy-num">01</div>
+                        <h3>Rehost</h3>
+                        <p>Transfer your application to the cloud environment with minimal architectural changes. The fastest path to cloud with immediate infrastructure cost savings.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-num">02</div>
+                        <h3>Replatform</h3>
+                        <p>Optimise your application for the cloud to improve productivity and scalability — without changing core architecture. A targeted performance upgrade.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-num">03</div>
+                        <h3>Refactor</h3>
+                        <p>Modify applications to fully support the cloud environment. Involves breaking monolithic applications into microservices for greater scalability and resilience.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-num">04</div>
+                        <h3>Revise</h3>
+                        <p>Build upon replatforming and refactoring by making more profound changes to system architecture and codebase — enabling deeper cloud-native capability.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-num">05</div>
+                        <h3>Rebuild</h3>
+                        <p>Discard or replace existing code entirely, allowing businesses to leverage innovative cloud-native features and build for future scale from the ground up.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Platforms -->
+        <section id="platforms" class="section" style="background: var(--color-ice);">
+            <div class="container">
+                <div class="reveal center-copy" style="text-align: center; margin-bottom: 48px;">
+                    <span class="section-tag">Cloud Platforms</span>
+                    <h2>Our Cloud Migration Offerings</h2>
+                    <p class="lead" style="margin-top: 16px;">We are platform-agnostic and certified across the world's three leading cloud providers — matching your business needs to the right cloud environment.</p>
+                </div>
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <div class="platform-logo"><img src="https://infotel-india.in/wp-content/uploads/2025/07/aws_logo.png" alt="AWS Logo"></div>
+                        <h3>AWS (Amazon Web Services)</h3>
+                        <p>The most comprehensive cloud platform with 200+ services. Ideal for businesses needing a broad range of tools — from compute and storage to machine learning, analytics, and global content delivery.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-logo"><img src="https://infotel-india.in/wp-content/uploads/2025/07/azure_logo.png" alt="Azure Logo"></div>
+                        <h3>Microsoft Azure</h3>
+                        <p>The preferred cloud for Microsoft-centric enterprises. Azure seamlessly integrates with Windows infrastructure, Active Directory, Office 365, and provides enterprise-grade compliance and hybrid cloud capabilities.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-logo"><img src="https://infotel-india.in/wp-content/uploads/2025/07/google_cloud_logo-1.png" alt="Google Cloud Logo"></div>
+                        <h3>Google Cloud Platform</h3>
+                        <p>Google Cloud's AI and machine learning capabilities make it the strongest choice for data-intensive workloads. Built-in threat intelligence identifies and counters cyber threats in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Benefits -->
+        <section id="benefits" class="section" style="background: var(--color-frost);">
+            <div class="container">
+                <div class="reveal" style="margin-bottom: 48px;">
+                    <span class="section-tag">Benefits</span>
+                    <h2>Benefits of Choosing Our Cloud Migration Services</h2>
+                </div>
+                <div class="benefits-layout">
+                    <div class="reveal-left">
+                        <img src="https://infotel-india.in/wp-content/uploads/2025/07/benefits.png" alt="Cloud migration benefits overview — Infotel India" style="width:100%;border-radius:var(--radius-xl); box-shadow:var(--shadow-card);object-fit:cover;">
+                    </div>
+                    <div class="benefit-list reveal-right">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-chart"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Optimised Cloud Costs</div>
+                                <div class="benefit-body">Reduce IT infrastructure costs by right-sizing cloud resources, choosing optimal storage tiers, and eliminating unnecessary on-premises hardware spend.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-shield"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Improved Security</div>
+                                <div class="benefit-body">Enhance protection with identity and access management, cloud-native security services, network security policies, and continuous compliance monitoring.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-refresh"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Improved Business Agility</div>
+                                <div class="benefit-body">Cloud flexibility lets stakeholders commit last-minute changes. Empower your teams to scale faster and respond to market shifts without infrastructure bottlenecks.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-cloud"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Better Backup & Disaster Recovery</div>
+                                <div class="benefit-body">Cloud technology enables reliable data backups and efficient disaster recovery — helping organisations recover lost data securely with minimal downtime.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-settings"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Reduced Maintenance Overhead</div>
+                                <div class="benefit-body">Your cloud provider manages infrastructure maintenance, freeing your teams to focus on value-driven work instead of routine server upkeep and hardware upgrades.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-code"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Consolidate Data Centres</div>
+                                <div class="benefit-body">Minimise the number of physical data centres consuming organisational space, reducing maintenance costs and simplifying your infrastructure footprint.</div>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><svg width="18" height="18"><use href="#icon-check"></use></svg></div>
+                            <div class="benefit-content">
+                                <div class="benefit-title">Sustainability & Lower Carbon Footprint</div>
+                                <div class="benefit-body">Cloud migration reduces physical resources — paper waste, energy consumption, and carbon emissions — helping your organisation meet sustainability goals.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: FAQ -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="reveal center-copy" style="text-align: center; margin-bottom: 48px;">
+                    <span class="section-tag">FAQs</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list reveal">
+                    <div class="faq-item is-open">
+                        <button class="faq-q">What are Cloud Migration Services? <svg class="faq-icon"><use href="#icon-chevron"></use></svg></button>
+                        <div class="faq-a">
+                            <p>Cloud Migration Services refer to the process of transferring data, applications, and other business elements from on-premises infrastructure to cloud environments — whether public, private, or hybrid — with minimal disruption to operations.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">How does Cloud Migration improve business efficiency? <svg class="faq-icon"><use href="#icon-chevron"></use></svg></button>
+                        <div class="faq-a">
+                            <p>Cloud migration enhances efficiency by automating processes and enabling real-time remote access, allowing teams to collaborate from anywhere. It also eliminates hardware refresh cycles, speeds up deployment, and scales resources to match demand instantly.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">How secure is the cloud transition? <svg class="faq-icon"><use href="#icon-chevron"></use></svg></button>
+                        <div class="faq-a">
+                            <p>Cloud migration is a highly secure process when managed correctly. We implement robust security measures including data encryption, multi-factor authentication, identity and access management, and regular security audits throughout the migration lifecycle.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What should businesses consider before migrating to the cloud? <svg class="faq-icon"><use href="#icon-chevron"></use></svg></button>
+                        <div class="faq-a">
+                            <p>Businesses should assess their specific workload needs, the type of cloud environment (private, public, or hybrid), total cost of ownership, regulatory and compliance requirements, and the internal technical expertise available before committing to a migration plan.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Which cloud platform is best for my business? <svg class="faq-icon"><use href="#icon-chevron"></use></svg></button>
+                        <div class="faq-a">
+                            <p>AWS is ideal if you need the broadest range of services and global infrastructure. Microsoft Azure is the strongest choice for organisations running Microsoft or Windows-based systems. Google Cloud Platform is best suited for AI, machine learning, and data-intensive workloads. We help you evaluate and choose the right fit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: CTA -->
+        <section id="cta" class="cta-strip-container container reveal">
+            <div class="cta-strip">
+                <div class="cta-orb cta-orb-1"></div>
+                <div class="cta-orb cta-orb-2"></div>
+                <h2>Discover how Cloud Migration can help you reach your business and technology potential.</h2>
+                <p>Whether you're moving a single application or your entire data centre, Infotel's cloud experts deliver a migration plan that reduces risk, controls costs, and positions you for long-term cloud success.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-cta">Discuss Your Requirements</a>
+                    <a href="#" class="btn btn-ghost-light">View Case Studies</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Infotel India" style="height: 38px; filter: brightness(0) invert(1);">
+                    <p>Delivering enterprise-grade IT transformation, cloud migration, and custom software development for global market leaders.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-head">Company</div>
+                    <a href="#" class="footer-link">About us</a>
+                    <a href="#" class="footer-link">Our Expertise</a>
+                    <a href="#" class="footer-link">Case Studies</a>
+                    <a href="#" class="footer-link">Contact us</a>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-head">Expertise</div>
+                    <a href="expertise-software-development.html" class="footer-link">Software Development</a>
+                    <a href="expertise-cloud-migration.html" class="footer-link">Cloud Migration</a>
+                    <a href="#" class="footer-link">IT Support</a>
+                    <a href="#" class="footer-link">Legacy Renovation</a>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-head">Legal</div>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 Infotel India. All rights reserved.</div>
+                <div class="footer-social">
+                    <!-- Social icons could go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const wasOpen = item.classList.contains('is-open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
+                if (!wasOpen) item.classList.add('is-open');
+            });
+        });
+
+        // Intersection Observer (Bidirectional)
+        const biDirectionalObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    entry.target.classList.remove('is-hidden');
+                } else {
+                    if (entry.boundingClientRect.top > 0) {
+                        entry.target.classList.remove('is-visible');
+                        entry.target.classList.add('is-hidden');
+                    }
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        const animatables = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .cloud-process-step, .strategy-card, .platform-card, .benefit-item');
+        animatables.forEach(el => biDirectionalObserver.observe(el));
+
+        // Stats Counter
+        const countUp = (el) => {
+            const target = parseInt(el.getAttribute('data-count'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            let current = 0;
+            const duration = 2000;
+            const step = Math.ceil(target / (duration / 16));
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    el.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    el.textContent = current + suffix;
+                }
+            }, 16);
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.counter').forEach(countUp);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statsObserver.observe(document.querySelector('#stats'));
+
+        // Load entry animation
+        window.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.hero-badge-card').forEach((card, i) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1) translateY(0)';
+                    }, 400 + (i * 200));
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

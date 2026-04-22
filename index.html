@@ -118,22 +118,67 @@
 
     section,
     footer {
-      scroll-margin-top: 96px
+      scroll-margin-top: 72px; /* matches desktop nav height exactly */
+    }
+    @media (max-width: 1023px) {
+      section, footer { scroll-margin-top: 64px; } /* tablet nav height */
+    }
+    @media (max-width: 767px) {
+      section, footer { scroll-margin-top: 56px; } /* mobile nav height */
     }
 
     :focus-visible {
-      outline: 3px solid rgba(163, 216, 247, .9);
-      outline-offset: 3px
+      outline: 3px solid rgba(0, 80, 145, 0.9); /* navy — passes WCAG */
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
     .container {
-      width: min(var(--container-max), calc(100% - 160px));
-      margin: 0 auto
+      width: min(var(--container-max), calc(100% - 160px)); /* 80px each side */
+      margin: 0 auto;
+    }
+    @media (max-width: 1023px) {
+      .container {
+        width: min(var(--container-max), calc(100% - 48px)); /* 24px each side */
+      }
+    }
+    @media (max-width: 767px) {
+      .container {
+        width: min(var(--container-max), calc(100% - 32px)); /* 16px each side */
+      }
     }
 
     .section {
       position: relative;
-      padding: 96px 0
+      padding: 96px 0;
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+    }
+    @media (max-width: 767px) {
+      .section { padding: 48px 0; }
+    }
+
+    /* Systematic heading → body gap */
+    .section h2 + p,
+    .section h2 + .lead,
+    .section-header .copy h2 + p {
+      margin-top: 20px;
+    }
+    @media (max-width: 1023px) {
+      .section h2 + p,
+      .section h2 + .lead,
+      .section-header .copy h2 + p {
+        margin-top: 16px;
+      }
+    }
+    @media (max-width: 767px) {
+      .section h2 + p,
+      .section h2 + .lead,
+      .section-header .copy h2 + p {
+        margin-top: 14px;
+      }
     }
 
     .section h2,
@@ -176,7 +221,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       padding: 5px 16px;
       border-radius: var(--radius-full);
       background: var(--color-ice);
@@ -928,11 +973,24 @@
 
     .hero-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
       align-items: center;
       gap: 48px;
-      min-height: calc(100vh - 60px);
-      padding: 16px 0 60px;
+      min-height: calc(100vh - 72px);
+      padding: 128px 0 64px; /* 128px top as per design system */
+    }
+    @media (max-width: 1023px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 80px 0 48px; /* 80px top on tablet */
+      }
+    }
+    @media (max-width: 767px) {
+      .hero-layout {
+        gap: 30px;
+        padding: 60px 0 36px; /* 60px top on mobile */
+      }
     }
 
     .hero-copy {
@@ -946,11 +1004,17 @@
 
     .hero-title {
       margin-bottom: 24px;
-      font-size: clamp(42px, 5.5vw, 68px);
+      font-size: clamp(34px, 5.5vw, 64px);
       line-height: .95;
       font-weight: var(--font-weight-bold);
       letter-spacing: -.05em;
       color: var(--color-white)
+    }
+
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 34px;
+      }
     }
 
     .hero-title span {
@@ -1027,11 +1091,38 @@
 
     .hero-visual {
       position: relative;
-      min-height: 580px;
-      transform: translateX(52px);
+    }
+
+    .hero-img-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-real-img {
+      width: 100%;
+      height: auto;
+      min-height: 480px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 32px 80px rgba(10, 22, 40, 0.32);
+      /* Entrance animation — already handled by body.loaded */
+      transform: translateX(48px);
       opacity: 0;
-      will-change: transform;
-      transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.4, 1) 280ms, opacity 0.7s cubic-bezier(0.2, 0.8, 0.4, 1) 280ms;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) 0.3s,
+                  opacity 0.8s ease 0.3s;
+    }
+    body.loaded .hero-real-img {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-real-img { min-height: 380px; border-radius: 16px; }
+    }
+    @media (max-width: 767px) {
+      .hero-real-img { min-height: 280px; border-radius: 12px; }
     }
 
     body.loaded .hero-visual {
@@ -1077,6 +1168,12 @@
       animation: floatCard 5s ease-in-out infinite;
       animation-delay: 1.4s;
       z-index: 10;
+    }
+
+    @media (max-width: 767px) {
+      .hero-float {
+        display: none; /* clean on mobile — stats are in the about section */
+      }
     }
 
     @keyframes floatCard {
@@ -1276,6 +1373,16 @@
       line-height: 1.5
     }
 
+    @media (max-width: 480px) {
+      .stat-card {
+        min-height: 140px;
+        padding: 18px;
+      }
+      .stat-card .stat-number {
+        font-size: 38px;
+      }
+    }
+
     .stat-card--navy {
       background: var(--color-navy);
       color: var(--color-white)
@@ -1314,10 +1421,33 @@
     .case-grid,
     .industries-grid,
     .blog-grid,
-    .team-grid {
+    .team-grid,
+    .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px
+      gap: 24px;
+    }
+
+    @media (max-width: 1023px) {
+      .services-grid,
+      .case-grid,
+      .industries-grid,
+      .blog-grid,
+      .team-grid,
+      .stats-grid {
+        gap: 20px;
+      }
+    }
+    @media (max-width: 767px) {
+      .services-grid,
+      .case-grid,
+      .industries-grid,
+      .blog-grid,
+      .stats-grid {
+        gap: 16px;
+      }
+      /* team-grid uses horizontal scroll on mobile — keep its gap at 16px too */
+      .team-grid { gap: 16px; }
     }
 
     .service-card p,
@@ -1587,27 +1717,52 @@
       animation: pulseOverlay 2.4s ease-in-out infinite
     }
 
-    .video-content {
+    .video-element {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+    .video-element.is-playing {
+      opacity: 1;
+    }
+    .video-overlay {
       position: absolute;
       inset: 0;
       display: grid;
       place-items: center;
       padding: 32px;
       text-align: center;
-      z-index: 1
+      z-index: 1;
+      transition: opacity 0.4s ease;
+      background: linear-gradient(
+        135deg,
+        rgba(10,22,40,0.38),
+        rgba(10,22,40,0.74)
+      );
     }
-
-    .video-content strong {
+    .video-overlay.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .video-overlay strong {
       font-size: clamp(24px, 3.2vw, 40px);
       line-height: 1.05;
       color: var(--color-white);
-      letter-spacing: -.05em
+      letter-spacing: -0.05em;
+      display: block;
+      margin-bottom: 14px;
     }
-
-    .video-content p {
-      margin-top: 14px;
+    .video-overlay p {
       max-width: 540px;
-      color: rgba(255, 255, 255, .78)
+      color: rgba(255,255,255,0.78);
+      font-size: 16px;
+      margin-bottom: 0;
     }
 
     .video-button {
@@ -1850,7 +2005,9 @@
 
     .slider-dots button.is-active {
       background: var(--color-royal);
-      transform: scale(1.12)
+      transform: scale(1.12);
+      width: 28px;
+      border-radius: 6px; /* ADD THIS — makes it a pill shape */
     }
   </style>
   <style>
@@ -2090,7 +2247,7 @@
       }
     }
 
-    @media (max-width:1180px) {
+    @media (max-width:1023px) {
       .container {
         width: min(var(--container-max), calc(100% - 48px))
       }
@@ -2112,8 +2269,9 @@
       }
 
       .hero-layout {
+        grid-template-columns: 1fr;
         min-height: auto;
-        padding: 42px 0 28px
+        padding: 80px 0 48px;
       }
 
       .footer-grid {
@@ -2122,9 +2280,7 @@
     }
 
     @media (max-width:1023px) {
-      .section {
-        padding: 64px 0
-      }
+      /* section padding already handled above */
 
       .hero-layout,
       .about-layout,
@@ -2577,43 +2733,23 @@
           <div class="hero-note"><span>Trusted partner for digital transformation, cloud migration, and modern software
               delivery</span><span class="divider" aria-hidden="true"></span></div>
         </div>
-        <div class="hero-visual" id="heroVisual">
-          <div class="hero-visual-inner">
-            <svg class="hero-visual-svg" viewBox="0 0 520 580" width="100%" height="100%"
-              xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="260" cy="290" rx="180" ry="180" fill="#026dc4" opacity="0.18" filter="blur(60px)" />
-              <rect width="100%" height="100%" fill="rgba(255,255,255,0.05)" rx="20" />
-              <rect x="40" y="60" width="440" height="80" rx="12" fill="rgba(163,216,247,0.12)"
-                stroke="rgba(163,216,247,0.28)" stroke-width="1" />
-              <path d="M60 90 L68 82 L60 74 M76 90 L84 82 L76 74" fill="none" stroke="rgba(255,255,255,0.5)"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="260" cy="140" r="5" fill="rgba(163,216,247,0.7)" />
-              <line x1="260" y1="140" x2="260" y2="180" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <rect x="70" y="180" width="380" height="64" rx="10" fill="rgba(245,135,64,0.10)"
-                stroke="rgba(245,135,64,0.26)" stroke-width="1" />
-              <path d="M100 216 Q100 206 110 206 Q115 198 124 200 Q130 200 130 208 Q138 210 134 216 Z" fill="none"
-                stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="260" cy="244" r="5" fill="rgba(163,216,247,0.7)" />
-              <line x1="260" y1="244" x2="260" y2="290" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <rect x="100" y="290" width="320" height="56" rx="10" fill="rgba(163,216,247,0.08)"
-                stroke="rgba(163,216,247,0.2)" stroke-width="1" />
-              <path d="M116 314 L124 314 M124 314 L120 310 M124 314 L120 318" fill="none" stroke="rgba(255,255,255,0.5)"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="150" cy="140" r="5" fill="rgba(163,216,247,0.7)" />
-              <circle cx="370" cy="140" r="5" fill="rgba(163,216,247,0.7)" />
-              <circle cx="180" cy="244" r="5" fill="rgba(163,216,247,0.7)" />
-              <circle cx="340" cy="244" r="5" fill="rgba(163,216,247,0.7)" />
-              <line x1="150" y1="140" x2="180" y2="180" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <line x1="370" y1="140" x2="340" y2="180" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <line x1="180" y1="244" x2="210" y2="290" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <line x1="340" y1="244" x2="310" y2="290" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4" />
-              <circle cx="210" cy="290" r="5" fill="rgba(163,216,247,0.7)" />
-              <circle cx="310" cy="290" r="5" fill="rgba(163,216,247,0.7)" />
-            </svg>
+        <div class="hero-visual parallax-hero" data-parallax-speed="0.12" id="heroVisual">
+          <div class="hero-img-frame">
+            <img
+              src="https://infotel-india.in/wp-content/uploads/2025/07/person-front-computer-working-html-1.png"
+              alt="Infotel India team delivering enterprise IT solutions"
+              class="hero-real-img"
+              loading="eager"
+              width="599"
+              height="403"
+            />
+            <!-- Keep the existing floating-card hero-float div unchanged -->
             <div class="floating-card hero-float" id="heroFloat">
-              <h4>Projects Delivered 500+</h4>
+              <h4>Projects Delivered</h4>
               <div class="metric">500+</div>
-              <div class="mini-chart" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <div class="mini-chart" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
             </div>
           </div>
         </div>
@@ -2895,20 +3031,34 @@
               Transformation ·</span></div>
         </div>
         <div class="video-shell reveal" data-video-shell>
-          <div class="video-content">
-            <div>
+          <!-- Actual HTML5 video element -->
+          <video
+            id="site-video"
+            class="video-element"
+            src="https://infotel-india.in/wp-content/uploads/2024/10/Yogesh.mp4"
+            poster=""
+            preload="none"
+            playsinline
+            loop
+            aria-label="Yogesh Somangali, Head of Delivery at Infotel India, on Sustainable IT"
+          ></video>
 
-              <strong>Inside Infotel India's delivery mindset</strong>
-              <p>Play the brand reel placeholder to preview how a future designer or editor can swap in final video
-                content without changing the layout.</p>
-              <button class="video-button" type="button" aria-label="Play company video" data-video-toggle>
-                <span class="icon-wrap" aria-hidden="true"><svg class="icon">
-                    <use data-video-icon href="#icon-play"></use>
-                  </svg></span>
-                <span data-video-label>Play Brand Reel</span>
-              </button>
-            </div>
-
+          <!-- Overlay — sits on top of video, hides when playing -->
+          <div class="video-overlay" id="video-overlay">
+            <strong>Inside Infotel India's delivery mindset</strong>
+            <p>Yogesh Somangali, Head of Delivery &amp; Customer Relationship,
+               on our approach to Sustainable IT and Green IT practices.</p>
+            <button
+              class="video-button ripple-container"
+              type="button"
+              aria-label="Play company video"
+              data-video-toggle
+            >
+              <span class="icon-wrap" aria-hidden="true">
+                <svg class="icon"><use data-video-icon href="#icon-play"/></svg>
+              </span>
+              <span data-video-label>Play Video</span>
+            </button>
           </div>
         </div>
         <div class="quote-block reveal">
@@ -3399,7 +3549,7 @@
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 1180) closeMenu();
+      if (window.innerWidth > 1023) closeMenu();
       updateSlider();
     });
 
@@ -3483,13 +3633,49 @@
     updateSlider();
     startSlider();
 
-    videoToggle.addEventListener('click', () => {
-      videoPlaying = !videoPlaying;
-      videoShell.classList.toggle('is-playing', videoPlaying);
-      videoIcon.setAttribute('href', videoPlaying ? '#icon-pause' : '#icon-play');
-      videoLabel.textContent = videoPlaying ? 'Pause Brand Reel' : 'Play Brand Reel';
-      videoToggle.setAttribute('aria-label', videoPlaying ? 'Pause company video' : 'Play company video');
-    });
+    // ── VIDEO SECTION — REAL VIDEO PLAYBACK ──
+    const videoEl      = document.getElementById('site-video');
+    const videoOverlay = document.getElementById('video-overlay');
+
+    if (videoToggle && videoEl) {
+      videoToggle.addEventListener('click', () => {
+        videoPlaying = !videoPlaying;
+
+        if (videoPlaying) {
+          // Play video
+          videoEl.play().catch(() => {
+            // Autoplay blocked — show a message or fallback
+            videoPlaying = false;
+          });
+          videoEl.classList.add('is-playing');
+          videoOverlay.classList.add('is-hidden');
+          videoShell.classList.add('is-playing');
+          videoIcon.setAttribute('href', '#icon-pause');
+          videoLabel.textContent = 'Pause Video';
+          videoToggle.setAttribute('aria-label', 'Pause company video');
+        } else {
+          // Pause video
+          videoEl.pause();
+          videoEl.classList.remove('is-playing');
+          videoOverlay.classList.remove('is-hidden');
+          videoShell.classList.remove('is-playing');
+          videoIcon.setAttribute('href', '#icon-play');
+          videoLabel.textContent = 'Play Video';
+          videoToggle.setAttribute('aria-label', 'Play company video');
+        }
+      });
+
+      // When video ends naturally, reset UI to initial state
+      videoEl.addEventListener('ended', () => {
+        videoPlaying = false;
+        videoEl.classList.remove('is-playing');
+        videoOverlay.classList.remove('is-hidden');
+        videoShell.classList.remove('is-playing');
+        videoIcon.setAttribute('href', '#icon-play');
+        videoLabel.textContent = 'Play Video';
+        videoToggle.setAttribute('aria-label', 'Play company video');
+      });
+    }
   </script>
 </body>
 
